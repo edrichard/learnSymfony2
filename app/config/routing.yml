@@ -1,5 +1,5 @@
-MyAppFilmothequeBundle:
-    resource: "@MyAppFilmothequeBundle/Resources/config/routing.yml"
+HelloBundle:
+    resource: "@HelloBundle/Resources/config/routing.yml"
     prefix:   /
 
 # Internal routing configuration to handle ESI
