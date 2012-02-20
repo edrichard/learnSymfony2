@@ -1,3 +1,5 @@
 *.php~
 *.yml~
 *.html.twig~
+app/cache/
+app/logs/
