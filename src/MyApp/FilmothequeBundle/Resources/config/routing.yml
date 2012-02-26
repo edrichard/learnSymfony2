@@ -1,0 +1,6 @@
+FilmothequeBundle_homepage:
+    pattern:  /bonjour/{name}
+    defaults: { _controller: FilmothequeBundle:Default:index }
+FilmothequeBundleTest:
+    pattern : /myapp/test
+    defaults: { _controller: FilmothequeBundle:Test:index }
