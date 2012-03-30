@@ -1,7 +1,0 @@
-parameters:
-#    filmotheque.example.class: MyApp\FilmothequeBundle\Example
-
-services:
-#    filmotheque.example:
-#        class: %filmotheque.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

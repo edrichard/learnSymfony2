@@ -3,3 +3,4 @@
 *.html.twig~
 app/cache/
 app/logs/
+/nbproject/private/
