@@ -1,7 +1,3 @@
-FilmothequeBundle:
-    resource: "@FilmothequeBundle/Resources/config/routing.yml"
-    prefix:   /
-
 HelloBundle:
     resource: "@HelloBundle/Resources/config/routing.yml"
     prefix:   /
