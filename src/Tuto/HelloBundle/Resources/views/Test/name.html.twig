@@ -1,5 +1,11 @@
-<html>
-    <body>
+{% extends 'HelloBundle::layout.html.twig' %}
+
+{% block title %}Name{% endblock %}
+
+{% block content %}
+
+    <p>
         Hello {{ name }} !
-    </body>
-</html>
+    </p>
+
+{% endblock %}
