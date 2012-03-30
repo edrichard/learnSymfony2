@@ -1,0 +1,33 @@
+/* 
+    Document   : styles
+    Created on : 30 mars 2012, 22:18:15
+    Author     : edrichard
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html, body {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.last {
+    margin-right: 0;
+}
+
+#wrapper {
+    
+}
+
+footer {
+    text-align: center;
+}
