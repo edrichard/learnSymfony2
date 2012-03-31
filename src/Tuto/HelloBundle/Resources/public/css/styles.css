@@ -12,20 +12,79 @@ html, body {
 }
 
 header nav ul {
+    list-style-type: none;
     padding: 0;
+    width: 1024px;
+    position: absolute;
+    z-index: 100;
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    float: left;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.last {
-    margin-right: 0;
+header nav ul li:hover > .menu_level_1 {
+    display: block;
+}
+
+header nav ul li a:link, header nav ul li a:visited {
+    display: block;
+    height: 1%;
+    color: #FFF;
+    background: #3B4E77;
+    margin: 0;
+    padding: 4px 8px;
+    border-right: 1px solid #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    background-color: #F2462E;
+}
+
+header nav ul li a:active {
+    background-color: #5F879D;
+}
+
+header nav ul .menu_level_1 {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header nav ul .menu_level_1 li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 149px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+header nav ul .menu_level_1 li a:link, header nav ul .menu_level_1 li a:visited {
+    display: block;
+    color: #FFF;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    background: transparent url("../images/fondTR.png") repeat;
+}
+
+header nav ul .menu_level_1 li a:hover {
+    background-image: none;
+    background-color: #F2462E;
 }
 
 #wrapper {
-    
+    clear: both;
+    padding-top: 40px;
 }
 
 footer {

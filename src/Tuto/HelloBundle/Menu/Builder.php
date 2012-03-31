@@ -13,6 +13,10 @@ class Builder extends ContainerAware
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
 
         $menu->addChild('Home', array('route' => 'HelloBundleIndex'));
+        
+        $menu['Home']->addChild('Google', array('uri' => 'http://www.google.fr'));
+        $menu['Home']->addChild('Facebook', array('uri' => 'http://www.facebook.com'));
+        
         $menu->addChild('About Me', array(
             'route' => 'HelloBundleName',
             'routeParameters' => array('name' => 'Jon')
