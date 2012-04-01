@@ -6,6 +6,56 @@
         Purpose of the stylesheet follows.
 */
 
+@font-face {
+    font-family: 'PreludeFLFMediumItalic';
+    src: url('preludeflf-italic-webfont.eot');
+    src: url('preludeflf-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-italic-webfont.woff') format('woff'),
+         url('preludeflf-italic-webfont.ttf') format('truetype'),
+         url('preludeflf-italic-webfont.svg#PreludeFLFMediumItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PreludeFLFBold';
+    src: url('preludeflf-bold-webfont.eot');
+    src: url('preludeflf-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-bold-webfont.woff') format('woff'),
+         url('preludeflf-bold-webfont.ttf') format('truetype'),
+         url('preludeflf-bold-webfont.svg#PreludeFLFBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PreludeFLFRegular';
+    src: url('preludeflf-webfont.eot');
+    src: url('preludeflf-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-webfont.woff') format('woff'),
+         url('preludeflf-webfont.ttf') format('truetype'),
+         url('preludeflf-webfont.svg#PreludeFLFRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PreludeFLFBoldItalic';
+    src: url('preludeflf-bolditalic-webfont.eot');
+    src: url('preludeflf-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-bolditalic-webfont.woff') format('woff'),
+         url('preludeflf-bolditalic-webfont.ttf') format('truetype'),
+         url('preludeflf-bolditalic-webfont.svg#PreludeFLFBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
 html, body {
     width: 1024px;
     margin: 0 auto;
@@ -85,6 +135,10 @@ header nav ul .menu_level_1 li a:hover {
 #wrapper {
     clear: both;
     padding-top: 40px;
+}
+
+h1 {
+    font-family: "PreludeFLFBoldItalic", Arial,Helvetica,sans-serif !important;
 }
 
 footer {
