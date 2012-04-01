@@ -1,4 +1,8 @@
-<h1>Book creation</h1>
+{% extends 'TutoBookBundle::layout.html.twig' %}
+
+{% block title %}Book creation{% endblock %}
+
+{% block content %}
 
 <form action="{{ path('book_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
@@ -14,3 +18,5 @@
         </a>
     </li>
 </ul>
+
+{% endblock %}

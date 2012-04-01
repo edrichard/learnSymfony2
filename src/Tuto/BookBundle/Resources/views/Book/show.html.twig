@@ -1,4 +1,8 @@
-<h1>Book</h1>
+{% extends 'TutoBookBundle::layout.html.twig' %}
+
+{% block title %}Book{% endblock %}
+
+{% block content %}
 
 <table class="record_properties">
     <tbody>
@@ -35,3 +39,5 @@
         </form>
     </li>
 </ul>
+
+{% endblock %}
