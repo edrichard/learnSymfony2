@@ -1,6 +1,5 @@
-TutoBookBundle:
-    resource: "@TutoBookBundle/Controller/"
-    type:     annotation
+BookBundle:
+    resource: "@BookBundle/Resources/config/routing.yml"
     prefix:   /
 
 HelloBundle:

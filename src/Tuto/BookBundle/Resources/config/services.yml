@@ -1,0 +1,7 @@
+parameters:
+#    book.example.class: Tuto\BookBundle\Example
+
+services:
+#    book.example:
+#        class: %book.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
