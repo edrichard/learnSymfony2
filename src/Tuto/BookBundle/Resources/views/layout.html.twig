@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>{% block title %}Books and authors{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('bundles/hello/css/styles.css') }}" type="text/css" media="all" />
     </head>
     <body>
         <header>
@@ -13,7 +14,7 @@
                 </ul> 
             </nav>
         </header>
-        <div id="wapper">
+        <div id="wrapper">
             <h1>{{ block('title') }}</h1>
             {% block content %}
             {% endblock %}
