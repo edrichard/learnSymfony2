@@ -1,3 +1,8 @@
+TutoBookBundle:
+    resource: "@TutoBookBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 HelloBundle:
     resource: "@HelloBundle/Resources/config/routing.yml"
     prefix:   /
