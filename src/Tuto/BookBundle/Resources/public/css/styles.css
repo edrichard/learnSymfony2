@@ -1,0 +1,155 @@
+/* 
+    Document   : styles
+    Created on : 30 mars 2012, 22:18:15
+    Author     : edrichard
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@font-face {
+    font-family: 'PreludeFLFMediumItalic';
+    src: url('preludeflf-italic-webfont.eot');
+    src: url('preludeflf-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-italic-webfont.woff') format('woff'),
+         url('preludeflf-italic-webfont.ttf') format('truetype'),
+         url('preludeflf-italic-webfont.svg#PreludeFLFMediumItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PreludeFLFBold';
+    src: url('preludeflf-bold-webfont.eot');
+    src: url('preludeflf-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-bold-webfont.woff') format('woff'),
+         url('preludeflf-bold-webfont.ttf') format('truetype'),
+         url('preludeflf-bold-webfont.svg#PreludeFLFBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PreludeFLFRegular';
+    src: url('preludeflf-webfont.eot');
+    src: url('preludeflf-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-webfont.woff') format('woff'),
+         url('preludeflf-webfont.ttf') format('truetype'),
+         url('preludeflf-webfont.svg#PreludeFLFRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PreludeFLFBoldItalic';
+    src: url('preludeflf-bolditalic-webfont.eot');
+    src: url('preludeflf-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('preludeflf-bolditalic-webfont.woff') format('woff'),
+         url('preludeflf-bolditalic-webfont.ttf') format('truetype'),
+         url('preludeflf-bolditalic-webfont.svg#PreludeFLFBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+html, body {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header nav {
+    float: left;
+}
+
+header aside {
+    float: right;
+    margin-top: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 1024px;
+    position: absolute;
+    z-index: 100;
+}
+
+header nav ul li {
+    float: left;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header nav ul li:hover > .menu_level_1 {
+    display: block;
+}
+
+header nav ul li a:link, header nav ul li a:visited {
+    display: block;
+    height: 1%;
+    color: #FFF;
+    background: #3B4E77;
+    margin: 0;
+    padding: 4px 8px;
+    border-right: 1px solid #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    background-color: #F2462E;
+}
+
+header nav ul li a:active {
+    background-color: #5F879D;
+}
+
+header nav ul .menu_level_1 {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header nav ul .menu_level_1 li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 149px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+header nav ul .menu_level_1 li a:link, header nav ul .menu_level_1 li a:visited {
+    display: block;
+    color: #FFF;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    background: transparent url("../images/fondTR.png") repeat;
+}
+
+header nav ul .menu_level_1 li a:hover {
+    background-image: none;
+    background-color: #F2462E;
+}
+
+#wrapper {
+    clear: both;
+    padding-top: 5px;
+}
+
+h1 {
+    font-family: "PreludeFLFBoldItalic", Arial,Helvetica,sans-serif !important;
+}
+
+footer {
+    text-align: center;
+}

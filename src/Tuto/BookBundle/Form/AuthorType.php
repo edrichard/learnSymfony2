@@ -13,7 +13,7 @@ class AuthorType extends AbstractType
             ->add('name')
             ->add('email')
             ->add('website')
-            ->add('books')
+            ->add('books', null, array('required' => false))
         ;
     }
 

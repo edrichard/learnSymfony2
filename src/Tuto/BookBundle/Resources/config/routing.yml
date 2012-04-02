@@ -1,6 +1,9 @@
-BookBundle_homepage:
+BookBundleHomepage:
     pattern:  /bookbundle/hello/{name}
     defaults: { _controller: BookBundle:Default:index }
-author:
-    pattern:  /author/
-    defaults: { _controller: "BookBundle:Author:index" }
+    
+BookBundAuthor:
+    resource: "@BookBundle/Resources/config/routing/author.yml"
+
+BookBundBook:
+    resource: "@BookBundle/Resources/config/routing/book.yml"
