@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Books and authors{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('bundles/tutobook/css/styles.css') }}" type="text/css" media="all" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="{{ path('book') }}">Books</a></li>
+                    <li><a href="{{ path('author') }}">Authors</a></li>
+                </ul> 
+            </nav>
+            <aside>
+                <div id="lang">
+                    Choose the language : 
+                    <a href=""><img src="{{ asset('bundles/tutobook/images/en.png') }}" alt="en" /></a>
+                    <a href=""><img src="{{ asset('bundles/tutobook/images/fr.png') }}" alt="fr" /></a>
+                </div>
+            </aside>
+        </header>
+        <div id="wrapper">
+            <h1>{{ block('title') }}</h1>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer>
+            &copy; edrichardfr
+        </footer>
+    </body>
+</html>
