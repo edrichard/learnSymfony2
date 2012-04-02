@@ -1,0 +1,30 @@
+book:
+    pattern:  /
+    defaults: { _controller: "BookBundle:Book:index" }
+
+book_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BookBundle:Book:show" }
+
+book_new:
+    pattern:  /new
+    defaults: { _controller: "BookBundle:Book:new" }
+
+book_create:
+    pattern:  /create
+    defaults: { _controller: "BookBundle:Book:create" }
+    requirements: { _method: post }
+
+book_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BookBundle:Book:edit" }
+
+book_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BookBundle:Book:update" }
+    requirements: { _method: post }
+
+book_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BookBundle:Book:delete" }
+    requirements: { _method: post }

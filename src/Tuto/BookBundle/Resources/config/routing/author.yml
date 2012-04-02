@@ -1,0 +1,30 @@
+author:
+    pattern:  /
+    defaults: { _controller: "BookBundle:Author:index" }
+
+author_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BookBundle:Author:show" }
+
+author_new:
+    pattern:  /new
+    defaults: { _controller: "BookBundle:Author:new" }
+
+author_create:
+    pattern:  /create
+    defaults: { _controller: "BookBundle:Author:create" }
+    requirements: { _method: post }
+
+author_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BookBundle:Author:edit" }
+
+author_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BookBundle:Author:update" }
+    requirements: { _method: post }
+
+author_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BookBundle:Author:delete" }
+    requirements: { _method: post }
