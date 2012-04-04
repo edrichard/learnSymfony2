@@ -1,1 +1,14 @@
 language: Choix de la langue
+home: Accueil
+hello: Bonjour
+
+book: Livre
+book.books: Livres
+book.list: Liste des livres
+book.name: Titre du livre
+book.price: Prix
+
+actions: Actions
+actions.action.show: Montrer
+actions.action.edit: Edition
+actions.action.new: Nouveau livre

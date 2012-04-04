@@ -1,1 +1,14 @@
 language: Choose the language
+home: Home
+hello: Hello
+
+book: Book
+book.books: Books
+book.list: Book list
+book.name: Book title
+book.price: Price
+
+actions: Actions 
+actions.action.show: Show
+actions.action.edit: Edit
+actions.action.new: New book

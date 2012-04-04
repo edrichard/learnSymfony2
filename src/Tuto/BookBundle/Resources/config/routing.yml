@@ -1,5 +1,5 @@
 BookBundleHomepage:
-    pattern:  /hello
+    pattern:  /hello/{name}
     defaults: { _controller: BookBundle:Default:index }
 
 BookBundleAuthor:
