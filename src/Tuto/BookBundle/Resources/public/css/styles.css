@@ -68,6 +68,8 @@ header nav {
 header aside {
     float: right;
     margin-top: 20px;
+    position: relative;
+    z-index: 100;
 }
 
 header nav ul {
