@@ -16,7 +16,13 @@
     {% for entity in entities %}
         <tr class="{{ cycle(['even','odd'],loop.index) }}">
             <td><a href="{{ path('book_show', { 'id': entity.id }) }}">{{ entity.name }}</a></td>
-            <td>{{ entity.price }}</td>
+            <td>
+                {% if app.session.locale == 'fr'  %}
+                    {{ entity.price }} €
+                {% else %}
+                   $ {{ entity.price * 0.7612088 | number_format(2) }}
+                {% endif %}
+            </td>
             <td><a href="{{ path('book_show', { 'id': entity.id }) }}">{{ 'actions.action.show' | trans }}</a></td>
             <td><a href="{{ path('book_edit', { 'id': entity.id }) }}">{{ 'actions.action.edit' | trans }}</a></td>
         </tr>
