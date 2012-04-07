@@ -13,25 +13,25 @@
         </tr>
     </thead>
     <tbody>
-    {% for entity in entities %}
+    {% for book in books %}
         <tr class="{{ cycle(['even','odd'],loop.index) }}">
-            <td><a href="{{ path('book_show', { 'id': entity.id }) }}">{{ entity.name }}</a></td>
+            <td><a href="{{ path('book_show', { 'id': book.id }) }}">{{ book.name }}</a></td>
             <td>
-                {% if app.session.locale == 'fr'  %}
-                    {{ entity.price }} €
-                {% else %}
-                   $ {{ entity.price * 0.7612088 | number_format(2) }}
-                {% endif %}
+                {{ book.price }} 
             </td>
-            <td><a href="{{ path('book_show', { 'id': entity.id }) }}">{{ 'actions.action.show' | trans }}</a></td>
-            <td><a href="{{ path('book_edit', { 'id': entity.id }) }}">{{ 'actions.action.edit' | trans }}</a></td>
+            <td><a href="{{ path('book_show', { 'id': book.id }) }}">{{ 'actions.action.show' | trans }}</a></td>
+            <td><a href="{{ path('book_edit', { 'id': book.id }) }}">{{ 'actions.action.edit' | trans }}</a></td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="4">{{ 'actions.action.noresult' | trans }}</td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
 
 <a href="{{ path('book_new') }}">
-    {{ 'actions.action.new' | trans }}
+    <img src="{{ asset('bundles/tutobook/images/arrowLeft.png') }}" alt="arrow" />{{ 'actions.action.new' | trans }}
 </a>
 
 {% endblock %}

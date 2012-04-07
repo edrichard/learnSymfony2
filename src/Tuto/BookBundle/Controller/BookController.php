@@ -17,14 +17,20 @@ class BookController extends Controller
      * Lists all Book entities.
      *
      */
-    public function indexAction()
+    public function indexAction($_local)
     {
         $em = $this->getDoctrine()->getEntityManager();
+        
+        $query = $em->createQueryBuilder();
+        $query->select('b')
+              ->from('BookBundle:Book', 'b')
+              ->orderBy('b.price', 'ASC');
 
-        $entities = $em->getRepository('BookBundle:Book')->findAll();
+        $execQuery = $query->getQuery();
+        $books = $execQuery->getResult();
 
         return $this->render('BookBundle:Book:index.html.twig', array(
-            'entities' => $entities
+            'books' => $books
         ));
     }
 
@@ -183,5 +189,22 @@ class BookController extends Controller
             ->add('id', 'hidden')
             ->getForm()
         ;
+    }
+    
+    public function currencyAction($lang)
+    {   
+        /*$curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, "http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);*/
+
+        //$content = curl_exec($curl);
+        //$xml = new SimpleXMLElement($content);
+        return $lang; 
+        //return $this->render('BookBundle:Book:index.html.twig', array('langue' => $langue));
+        /*foreach ($xml->Cube->Cube->Cube as $value) {
+            if($value['currency'] == 'USD'){
+                echo $value['currency']." : ".$value['rate']."<br/>";
+            } 
+        }*/
     }
 }

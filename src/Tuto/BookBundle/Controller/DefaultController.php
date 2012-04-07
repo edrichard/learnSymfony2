@@ -16,8 +16,7 @@ class DefaultController extends Controller
     
     public function chooseLanguageAction($language = null)
     {
-        if($language != null)
-        {
+        if($language != null){
             // On enregistre la langue en session
             $this->container->get('session')->setLocale($language);
         }
@@ -26,7 +25,7 @@ class DefaultController extends Controller
         $url = $this->container->get('request')->headers->get('referer');  var_dump($url); 
         if(empty($url)) {
             $url = $this->container->get('router')->generate('BookBundleHomepage');
-        } //var_dump($url);        exit();
+        }     
         return new RedirectResponse($url);
     }
 }
