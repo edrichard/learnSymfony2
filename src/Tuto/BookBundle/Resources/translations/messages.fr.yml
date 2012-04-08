@@ -19,5 +19,6 @@ author.website: Site web
 actions: Actions
 actions.action.show: Montrer
 actions.action.edit: Edition
-actions.action.new: Nouveau livre
+actions.action.new.book: Nouveau livre
+actions.action.new.author: Nouvelle auteur
 actions.action.noresult: Aucun résultat n'a été trouvé.

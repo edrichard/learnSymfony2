@@ -1,47 +1,37 @@
 {% extends 'BookBundle::layout.html.twig' %}
 
-{% block title %}Author List{% endblock %}
+{% block title %}{{ "author.list" | trans }}{% endblock %}
 
 {% block content %}
 
-<table class="records_list">
+<table class="records_list" border="1" width="100%">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Website</th>
-            <th>Actions</th>
+            <th>{{ "author.name" | trans }}</th>
+            <th>{{ "author.email" | trans }}</th>
+            <th>{{ "author.website" | trans }}</th>
+            <th colspan="2">Actions</th>
         </tr>
     </thead>
     <tbody>
-    {% for entity in entities %}
+    {% for author in authors %}
+        <tr class="{{ cycle(['even','odd'],loop.index) }}">
+            <td><a href="{{ path('author_show', { 'id': author.id }) }}">{{ author.name }}</a></td>
+            <td>{{ author.email }}</td>
+            <td>{{ author.website }}</td>
+            <td><a href="{{ path('author_show', { 'id': author.id }) }}">show</a></td>
+            <td><a href="{{ path('author_edit', { 'id': author.id }) }}">edit</a></td>
+        </tr>
+    {% else %}
         <tr>
-            <td><a href="{{ path('author_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.name }}</td>
-            <td>{{ entity.email }}</td>
-            <td>{{ entity.website }}</td>
-            <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('author_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('author_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-            </td>
+            <td colspan="5">{{ 'actions.action.noresult' | trans }}</td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
 
-<ul>
-    <li>
-        <a href="{{ path('author_new') }}">
-            Create a new entry
-        </a>
-    </li>
-</ul>
+<a href="{{ path('author_new') }}">
+    <img src="{{ asset('bundles/tutobook/images/arrowLeft.png') }}" alt="arrow" />{{ 'actions.action.new.author' | trans }}
+</a>
 
 {% endblock %}

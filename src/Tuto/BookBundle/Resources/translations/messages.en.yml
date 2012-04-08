@@ -19,5 +19,6 @@ author.website: Website
 actions: Actions 
 actions.action.show: Show
 actions.action.edit: Edit
-actions.action.new: New book
+actions.action.new.book: New book
+actions.action.new.author: New author
 actions.action.noresult: No results were found.

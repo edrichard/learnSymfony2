@@ -21,10 +21,10 @@ class AuthorController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entities = $em->getRepository('BookBundle:Author')->findAll();
+        $authors = $em->getRepository('BookBundle:Author')->findAll();
 
         return $this->render('BookBundle:Author:index.html.twig', array(
-            'entities' => $entities
+            'authors' => $authors
         ));
     }
 
