@@ -1,8 +1,6 @@
 book:
     pattern:  /book/
-    defaults: { _controller: "BookBundle:Book:index", _local: en }
-    requirements:
-      _local: fr|en
+    defaults: { _controller: "BookBundle:Book:index" }
 
 book_show:
     pattern:  /book/{id}/show

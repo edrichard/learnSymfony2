@@ -1,0 +1,31 @@
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Website</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for author in authors %}
+        <tr>
+            <td><a href="{{ path('author_show', { 'id': author.id }) }}">{{ author.id }}</a></td>
+            <td>{{ author.name }}</td>
+            <td>{{ author.email }}</td>
+            <td>{{ author.website }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('author_show', { 'id': author.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('author_edit', { 'id': author.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

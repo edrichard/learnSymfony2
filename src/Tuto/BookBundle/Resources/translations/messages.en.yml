@@ -1,6 +1,7 @@
 language: Choose the language
 home: Home
-hello: Hello
+best.author: The best authors
+best.book: The best books
 
 book: Book
 book.books: Books
@@ -12,3 +13,4 @@ actions: Actions
 actions.action.show: Show
 actions.action.edit: Edit
 actions.action.new: New book
+actions.action.noresult: No results were found.

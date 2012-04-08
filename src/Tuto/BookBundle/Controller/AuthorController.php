@@ -184,4 +184,22 @@ class AuthorController extends Controller
             ->getForm()
         ;
     }
+    
+    public function topAction($max = 5)
+    {
+        $em = $this->container->get('doctrine')->getEntityManager();
+        
+        $query = $em->createQueryBuilder();
+        $query->select('a')
+              ->from('BookBundle:Author', 'a')
+              ->orderBy('a.name', 'ASC')
+              ->setMaxResults($max);
+        
+        $execQuery = $query->getQuery();
+        $authors = $execQuery->getResult();
+        
+        return $this->container->get('templating')->renderResponse('BookBundle:Author:list.html.twig',
+                array('authors' => $authors)
+        );
+    }
 }

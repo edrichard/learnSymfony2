@@ -1,6 +1,7 @@
 language: Choix de la langue
 home: Accueil
-hello: Bonjour
+best.author: Les meilleurs auteurs
+best.book: Les meilleurs livres
 
 book: Livre
 book.books: Livres
@@ -12,3 +13,4 @@ actions: Actions
 actions.action.show: Montrer
 actions.action.edit: Edition
 actions.action.new: Nouveau livre
+actions.action.noresult: Aucun résultat n'a été trouvé.

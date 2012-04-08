@@ -17,20 +17,14 @@ class BookController extends Controller
      * Lists all Book entities.
      *
      */
-    public function indexAction($_local)
+    public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
-        
-        $query = $em->createQueryBuilder();
-        $query->select('b')
-              ->from('BookBundle:Book', 'b')
-              ->orderBy('b.price', 'ASC');
 
-        $execQuery = $query->getQuery();
-        $books = $execQuery->getResult();
+        $book = $em->getRepository('BookBundle:Book')->findAll();
 
         return $this->render('BookBundle:Book:index.html.twig', array(
-            'books' => $books
+            'books' => $book
         ));
     }
 
@@ -206,5 +200,23 @@ class BookController extends Controller
                 echo $value['currency']." : ".$value['rate']."<br/>";
             } 
         }*/
+    }
+    
+    public function topAction($max = 5)
+    {
+        $em = $this->container->get('doctrine')->getEntityManager();
+        
+        $query = $em->createQueryBuilder();
+        $query->select('b')
+              ->from('BookBundle:Book', 'b')
+              ->orderBy('b.price', 'ASC')
+              ->setMaxResults($max);
+        
+        $execQuery = $query->getQuery();
+        $books = $execQuery->getResult();
+        
+        return $this->container->get('templating')->renderResponse('BookBundle:Book:list.html.twig',
+                array('books' => $books)
+        );
     }
 }

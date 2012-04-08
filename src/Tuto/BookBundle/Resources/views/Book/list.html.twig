@@ -1,9 +1,3 @@
-{% extends 'BookBundle::layout.html.twig' %}
-
-{% block title %}{{'book.list' | trans }}{% endblock %}
-
-{% block content %}
-
 <table class="records_list" border="1" width="100%">
     <thead>
         <tr>
@@ -29,9 +23,3 @@
     {% endfor %}
     </tbody>
 </table>
-
-<a href="{{ path('book_new') }}">
-    <img src="{{ asset('bundles/tutobook/images/arrowLeft.png') }}" alt="arrow" />{{ 'actions.action.new' | trans }}
-</a>
-
-{% endblock %}
