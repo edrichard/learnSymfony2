@@ -9,6 +9,13 @@ book.list: Liste des livres
 book.name: Titre du livre
 book.price: Prix
 
+author: Auteur
+author.authors: Auteurs
+author.list: List des autheurs
+author.name: Nom et prénom
+author.email: Email
+author.website: Site web
+
 actions: Actions
 actions.action.show: Montrer
 actions.action.edit: Edition

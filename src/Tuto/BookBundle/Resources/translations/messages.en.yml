@@ -9,6 +9,13 @@ book.list: Book list
 book.name: Book title
 book.price: Price
 
+author: Author
+author.authors: Authors
+author.list: Author list
+author.name: Name and firstname
+author.email: Email
+author.website: Website
+
 actions: Actions 
 actions.action.show: Show
 actions.action.edit: Edit

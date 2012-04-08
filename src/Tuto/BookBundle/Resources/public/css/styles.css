@@ -162,8 +162,8 @@ h1 {
     font-family: "PreludeFLFBoldItalic", Arial,Helvetica,sans-serif !important;
 }
 
-.records_list {
-    
+.records_list tbody tr:hover {
+    background: yellow;
 }
 
 .even {

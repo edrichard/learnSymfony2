@@ -5,7 +5,7 @@
 {% block content %}
 
 <h3>{{"best.author" | trans }}</h3>
-{% render 'BookBundle:Author:top' with { 'max' : 1 } %}
+{% render 'BookBundle:Author:top' with { 'max' : 3 } %}
 
 <h3>{{"best.book" | trans }}</h3>
 {% render 'BookBundle:Book:top' with { 'max' : 3 } %}
