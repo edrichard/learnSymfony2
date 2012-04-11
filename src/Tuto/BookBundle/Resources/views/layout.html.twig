@@ -8,9 +8,7 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="{{ path('BookBundleHomepage') }}">Home</a></li>
-                    <li><a href="{{ path('book') }}">Books</a></li>
-                    <li><a href="{{ path('author') }}">Authors</a></li>
+                    {{ knp_menu_render('BookBundle:Builder:mainMenu') }}
                 </ul> 
             </nav>
             <aside>

@@ -5,9 +5,11 @@ best.book: The best books
 
 book: Book
 book.books: Books
+book.create: Book creation
 book.list: Book list
 book.name: Book title
 book.price: Price
+book.save: Save
 
 author: Author
 author.authors: Authors
