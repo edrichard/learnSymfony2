@@ -3,21 +3,31 @@
     <head>
         <title>{% block title %}Books and authors{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('bundles/tutobook/css/styles.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/tutobook/css/bootstrap.css') }}" type="text/css" media="all" />
     </head>
     <body>
         <header>
-            <nav>
-                <ul>
-                    {{ knp_menu_render('BookBundle:Builder:mainMenu') }}
-                </ul> 
-            </nav>
-            <aside>
-                <div id="lang">
-                    {{ "language" | trans }} : 
-                    <a href="{{ path('chooseLanguage', {'language' : 'en'}) }}"><img src="{{ asset('bundles/tutobook/images/en.png') }}" alt="en" /></a>
-                    <a href="{{ path('chooseLanguage', {'language' : 'fr'}) }}"><img src="{{ asset('bundles/tutobook/images/fr.png') }}" alt="fr" /></a>
+            <div class="navbar">
+                <div class="navbar-inner"> 
+                    <nav class="container">
+                            {{ knp_menu_render('BookBundle:Builder:mainMenu') }}
+                            <ul class="nav pull-right">
+                                <li class="divider-vertical"></li>
+                                <li>
+                                    <a href="{{ path('chooseLanguage', {'language' : 'en'}) }}" title="{{ "language" | trans }}">
+                                        <img src="{{ asset('bundles/tutobook/images/en.png') }}" alt="en" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('chooseLanguage', {'language' : 'fr'}) }}" title="{{ "language" | trans }}">
+                                        <img src="{{ asset('bundles/tutobook/images/fr.png') }}" alt="fr" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </aside>
+            </div>
         </header>
         <div id="wrapper">
             <h1>{{ block('title') }}</h1>

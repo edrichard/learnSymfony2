@@ -21,6 +21,7 @@
             </td>
             <td><a href="{{ path('book_show', { 'id': book.id }) }}">{{ 'actions.action.show' | trans }}</a></td>
             <td><a href="{{ path('book_edit', { 'id': book.id }) }}">{{ 'actions.action.edit' | trans }}</a></td>
+            {# TODO : created the link delete #}
         </tr>
     {% else %}
         <tr>

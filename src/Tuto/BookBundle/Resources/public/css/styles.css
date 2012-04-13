@@ -71,7 +71,7 @@ html, body {
     margin: 0 auto;
 }
 
-header nav {
+/* header nav {
     float: left;
 }
 
@@ -151,7 +151,7 @@ header nav ul .menu_level_1 li a:link, header nav ul .menu_level_1 li a:visited 
 header nav ul .menu_level_1 li a:hover {
     background-image: none;
     background-color: #F2462E;
-}
+}*/
 
 #wrapper {
     clear: both;

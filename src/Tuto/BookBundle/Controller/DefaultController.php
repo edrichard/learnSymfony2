@@ -22,7 +22,7 @@ class DefaultController extends Controller
         }
 
         // on tente de rediriger vers la page d'origine
-        $url = $this->container->get('request')->headers->get('referer');  var_dump($url); 
+        $url = $this->container->get('request')->headers->get('referer');   
         if(empty($url)) {
             $url = $this->container->get('router')->generate('BookBundleHomepage');
         }     
