@@ -1,4 +1,6 @@
 language: Choix de la langue
+menu.home: Accueil
+
 home: Accueil
 best.author: Les meilleurs auteurs
 best.book: Les meilleurs livres
