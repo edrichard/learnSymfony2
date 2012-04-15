@@ -4,11 +4,26 @@
 
 {% block content %}
 
-<form action="{{ path('book_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+<form action="{{ path('book_create') }}" method="post" {{ form_enctype(form) }} class="well">
+    <div>
+        {{ form_label(form.name) }}
+        {{ form_widget(form.name) }}
+        {{ form_errors(form.name) }}
+    </div>
+    <div>
+        {{ form_label(form.price) }}
+            <div class="input-prepend input-append">
+                <span class="add-on">{{ "book.price.devise" | trans }}</span>
+                {{ form_widget(form.price) }}
+                {{ form_errors(form.price) }}
+            </div>
+    </div>
+        
+    {{ form_rest(form) }}
+        
     <p>
-        <button type="submit">{{ "book.save" | trans }}</button>
-        <button type="reset">Reset</button>
+        <button type="submit" class="btn btn-primary">{{ "book.save" | trans }}</button>
+        <button type="reset" class="btn">Reset</button>
     </p>
 </form>
 

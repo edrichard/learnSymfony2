@@ -11,10 +11,14 @@ class BookType extends AbstractType
 {
     public function buildForm(FormBuilder $builder, array $options)
     {
-        $builder->add('name', 'text', array('label' => 'book.name', 'required' => true))
-                ->add('price', 'integer', array('label' => 'book.price', 'required' => true,
-                    'rounding_mode' => IntegerToLocalizedStringTransformer::ROUND_CEILING, 
-                    'grouping' => NumberFormatter::GROUPING_USED));
+        $builder->add('name', 'text', array('label'     => 'book.name', 
+                                            'required'  => true, 
+                                            'attr'      => array('class' => 'control-label')))
+                ->add('price', 'integer', array('label'         => 'book.price',
+                                                'required'      => true,
+                                                'rounding_mode' => IntegerToLocalizedStringTransformer::ROUND_CEILING, 
+                                                'grouping'      => NumberFormatter::GROUPING_USED,
+                                                'attr'          => array('class' => 'control-label')));
     }
 
     public function getName()

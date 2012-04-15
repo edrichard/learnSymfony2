@@ -96,17 +96,30 @@ h1 {
    background: #fff; 
 }
 
-form div {
-    margin-top: 10px;
-}
-
 form div label{
     float: left;
     width: 150px;
+    padding-top: 6px;
+}
+
+form div ul {
+    list-style: none;
+    width: 595px;
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    padding-top: 6px;
+    color: red;
 }
 
 form p button[type="submit"]{
     width: 200px;
+}
+
+.control-label[name="tuto_bookbundle_booktype[price]"]{
+    margin-bottom: 0px;
+    margin-left: -4px;
+    width: 184px;
 }
 
 footer {

@@ -11,6 +11,7 @@ book.create: Book creation
 book.list: Book list
 book.name: Book title
 book.price: Price
+book.price.devise: $
 book.save: Save
 
 author: Author
