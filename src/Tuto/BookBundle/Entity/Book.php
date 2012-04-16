@@ -3,6 +3,7 @@
 namespace Tuto\BookBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Tuto\BookBundle\Entity\Book
@@ -24,12 +25,27 @@ class Book
     /**
      * @var string $name
      * 
+     * @Assert\NotBlank(message = "book.error.name.blank")
+     * @Assert\MinLength(
+     *              limit = 3,
+     *              message = "book.error.name.minlenght"
+     * )
+     * @Assert\MaxLength(
+     *              limit = 255,
+     *              message = "book.error.name.maxlenght"
+     * )
+     * 
      * @ORM\Column(name="name", type="string", length=255, unique=false, nullable=false)
      */
     protected $name;
     
     /**
      * @var string $price
+     * 
+     * @Assert\Regex(
+     *              pattern="/^[0-9]*(\.)?[0-9]?[0-9]/",
+     *              message = "Your price is not valid."
+     * )
      * 
      * @ORM\Column(name="price", type="decimal", precision=9, scale=2, unique=false, nullable=false)
      */

@@ -1,0 +1,3 @@
+book.error.name.blank: Le champ titre ne peut pas être vide.
+book.error.name.minlenght: Le titre doit contenir plus de {{ limit }} caractères.
+book.error.name.maxlenght: Le titre doit contenir moins de {{ limit }} caractères.

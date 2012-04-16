@@ -1,0 +1,3 @@
+book.error.name.blank: Name must not be empty.
+book.error.name.minlenght: Title should have at least {{ limit }} characters.
+book.error.name.maxlenght: Title must be under {{ limit }} characters.
