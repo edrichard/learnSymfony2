@@ -63,4 +63,4 @@ fos_user:
     db_driver: orm
     firewall_name: main
     use_listener: false
-    user_class: Tuto\UserBundle\User
+    user_class: Tuto\UserBundle\Entity\User
