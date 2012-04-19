@@ -10,4 +10,4 @@ BookBundleBook:
 
 chooseLanguage:
     pattern:  /choose-language/{language}
-    defaults: { _controller: BookBundle:Default:chooseLanguage }  
+    defaults: { _controller: BookBundle:Default:chooseLanguage }
