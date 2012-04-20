@@ -96,10 +96,20 @@ h1 {
    background: #fff; 
 }
 
-form div label{
+form div label {
     float: left;
     width: 150px;
     padding-top: 6px;
+}
+
+form label {
+    float: left;
+    width: 150px;
+    padding-top: 6px;
+}
+
+form imput[type="text"]{
+    
 }
 
 form div ul {
